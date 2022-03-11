@@ -5,6 +5,3 @@ $b = "en maken,";
 $c = "werken niet.";
 
 echo $a,$b,$c;
-
-
-
