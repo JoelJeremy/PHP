@@ -4,29 +4,36 @@
 <head>
     <title> opdracht groen, rood </title>
     <style>
-        img  {
-            width: 200px;
-        }
-        img:nth-child(odd){
-            border: 5px solid green;
+
+        body {
+            text-align: center;
         }
 
-        img:nth-child(even){
-            border: 5px solid red;
+        img.red{
+            border: solid 5px red;
         }
+
+        img.green{
+            border: solid 5px green;
+        }
+
     </style>
 </head>
-<body>
 
-<img src="phpimages/auto1.jpg" alt="">
-<img src="phpimages/auto2.jpg" alt="">
-<img src="phpimages/auto3.jpg" alt="">
-<img src="phpimages/auto4.jpg" alt="">
-<br>
-<img src="phpimages/auto5.jpg" alt="">
-<img src="phpimages/auto6.jpg" alt="">
-<img src="phpimages/auto7.jpg" alt="">
-<img src="phpimages/auto8.jpg" alt="">
+      <body>
 
-</body>
+      <?php
+
+      for ($i = 1; $i <= 9; $i++) {
+          if( $i % 2 == 0){
+              echo '<img class="red" src="phpimages/auto'.$i.'.jpg" alt="auto'.$i.'">';
+          } else {
+              echo '<img class="green" src="phpimages/auto'.$i.'.jpg" alt="auto'.$i.'">';
+          }
+      }
+
+      ?>
+
+      </body>
+
 </html>
