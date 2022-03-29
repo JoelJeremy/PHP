@@ -1,39 +1,32 @@
-<?php
-
-for($i = 1; $i <= 9; $i++) {
-     echo "<img src='phpimages/auto".$i.".jpg'>";
-}
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title> opdracht groen rood</title>
+    <title> opdracht groen, rood </title>
     <style>
-        body {
-            text-align: center
+        img  {
+            width: 200px;
+        }
+        img:nth-child(odd){
+            border: 5px solid green;
         }
 
-        .rood {
-            border: red solid 5px;
-        }
-
-        .groen {
-            border: solid green 5px;
+        img:nth-child(even){
+            border: 5px solid red;
         }
     </style>
 </head>
 <body>
-<?php
-$class = "";
-for($i = 0; $i <= 9; $i++) {
-    if($i % 2 == 0) {
-        $class ="class = 'rood'";
-    } else{
-        $class = "class = 'groen'";
-    }
-    echo "<img".$class. "src ='phpimages/auto".$i.".jpg'>";
-}
-?>
+
+<img src="phpimages/auto1.jpg" alt="">
+<img src="phpimages/auto2.jpg" alt="">
+<img src="phpimages/auto3.jpg" alt="">
+<img src="phpimages/auto4.jpg" alt="">
+<br>
+<img src="phpimages/auto5.jpg" alt="">
+<img src="phpimages/auto6.jpg" alt="">
+<img src="phpimages/auto7.jpg" alt="">
+<img src="phpimages/auto8.jpg" alt="">
+
 </body>
 </html>
