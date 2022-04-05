@@ -7,6 +7,8 @@
 <body>
 <?php
 
+
+
 for( $i = -10; $i <= 40; $i++) {
     CalculateFahrenheitFromCelsius($i);
 }
