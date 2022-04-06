@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form action="resultaat.php" method="get">
+<form action="5.1result.php" method="get">
     Login_name <input type="text" name="Login_name" value="">
     <br>
     Password <input type="password" name="password" value="">
