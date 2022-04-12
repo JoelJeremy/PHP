@@ -19,19 +19,19 @@
 <form action="5.2result.php" method="post">
 
     <div class="form-group">
-        <!--name-->
+
         <label for="names"> Name: </label>
         <input class="form-control" id="names" type="text" name="name">
     </div>
     <br>
     <div class="form-group">
-        <!--E-mail-->
+
         <label for="email"> E-mail: </label>
         <input class="form-control" type="email" id="email" name="email">
     </div>
     <br>
     <div class="form-group">
-        <!--password-->
+
         <label for="password"> Password: </label>
         <input class="form-control" type="password" id="password" name="password">
     </div>

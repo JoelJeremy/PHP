@@ -4,8 +4,8 @@ $users = [
     "klaas@carpets.nl" => "snoepje777",
     "truushendriks@wegweg.nl" => "arkiearkie201"
 ];
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,25 +14,25 @@ $users = [
 </head>
 
 <body>
-
 <?php if (!isset($_POST['button'])) { ?>
     <!-- Formulier -->
+
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <!--email-->
         E-mail: <input type="text" name="email" placeholder="E-mail">
         <br>
+        <!--password-->
         Password: <input type="password" name="password" placeholder="Password">
+        <!--Button-->
         <input type="submit" name="button" value="SEND">
     </form>
     <?php
 
 } else {
-
-    //E-mail
     if (!isset($_POST['email']) or empty($_POST['email'])) {
         header("location: " . $_SERVER['PHP_SELF']);
     }
-    //Password
-    if (!isset($_POST['password']) or empty($_POST['password'])) {
+    if (!isset($_POST['password']) OR empty ($_POST['password'])) {
         header("location: " . $_SERVER['PHP_SELF']);
     }
 
@@ -40,13 +40,13 @@ $users = [
     $password = $_POST['password'];
 
     foreach ($users as $key => $value) {
-        if ($key == $email AND $value == $password) ;
-        {
-            exit("Welcome !");
+        if ($key == $email and $value == $password) {
+            exit("Welcome!");
         }
     }
-    exit("Sorry acces not granted !");
+    exit("Acces denied!");
 }
+
 ?>
 
 </body>
