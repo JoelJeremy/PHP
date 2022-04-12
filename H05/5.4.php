@@ -32,7 +32,7 @@ $users = [
     if (!isset($_POST['email']) or empty($_POST['email'])) {
         header("location: " . $_SERVER['PHP_SELF']);
     }
-    if (!isset($_POST['password']) OR empty ($_POST['password'])) {
+    if (!isset($_POST['password']) or empty ($_POST['password'])) {
         header("location: " . $_SERVER['PHP_SELF']);
     }
 
