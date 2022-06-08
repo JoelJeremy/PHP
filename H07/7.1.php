@@ -33,14 +33,13 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <!----------------------------------PHP SWITCH--------------------------------------------------------------------->
 <?php
 //--------------------------------------if statements-------------------------->
-if ($_SESSION['logged_in'] === true) {
+if ($_SESSION['logged_in'] == true) {
     exit();
 }
 
 if (!isset($_POST['submit'])) {
     exit("Sign in !");
 }
-
 //if empty's
 if (empty($_POST['username'])) {
     echo '<br> Please enter a username !!!';
@@ -59,8 +58,6 @@ if (!isset($_POST['password'])) {
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-
-//echo "{$username} - {$password}";
 
 $users = [
     [
@@ -82,6 +79,6 @@ $users = [
 foreach ($users as $user) {
     if ($user['username'] == $username && $user['password'] == $password) {
         $_SESSION['logged_in'] = true;
-        header("location: " . $_SERVER['PHP_SELF']);
+        header("location: " . $_SERVER['7,1,2.php']);
     }
 }
